@@ -1,0 +1,177 @@
+@amiga-window-light-blue: #c0d7e2;
+@amiga-window-medium-blue: #0057af;
+@amiga-window-dark-blue: #091d48;
+@amiga-window-orange: #dc7f0f;
+@amiga-window-red: #b23f24;
+*{
+  padding:0;
+  margin:0;
+}
+@font-face{
+  font-family: amiga;
+  src: url(amiga_forever/amiga4ever.ttf);
+}
+body{
+  background: #204090 ;
+  font-family: amiga;
+  color: #c0d7e2;
+}
+img{
+  margin:4px;
+}
+.no-scroll{
+  overflow: hidden !important ;
+}
+textarea {
+  resize: none;
+}
+
+.amiga-window{
+  border: 4px solid @amiga-window-light-blue;
+  border-top:0;
+  box-shadow: 2px 4px 0 0 rgba(0,0,0,0.5);
+  margin: 8px;
+  width: 700px;
+  input,textarea{
+    height:100px;
+    width: 334px;
+    background:rgba(0,0,0,0.25);
+    font-family: amiga;
+    color: @amiga-window-light-blue;
+    padding: 6px;
+    margin-top: 8px;
+    border: 2px solid @amiga-window-medium-blue;
+    border-radius: 2px;
+  }
+}
+.maximize{
+  width: auto;
+}
+.amiga-window-header-container{
+  color: @amiga-window-medium-blue;
+  display:flex;
+  align-content: stretch;
+  background: @amiga-window-light-blue;
+  height:28px;
+}
+.amiga-window-header{
+  border: 2px solid @amiga-window-medium-blue;
+  border-top: 0;
+  border-bottom: 0;
+  width: 28px;
+  margin-left:2px;
+}
+.amiga-window-header-last {
+  .amiga-window-header;
+  border-left:0;
+  margin-left:0;
+}
+
+.amiga-btn-close{
+  border : 2px solid @amiga-window-dark-blue;
+  margin: 2px;
+  overflow: hidden;
+  height: 18px;
+  background: @amiga-window-orange;
+  div{ // build minus sign in the middle.
+    border:2px solid black;
+    width:8px;
+    margin: 7px auto;
+  }
+}
+.amiga-btn-minimize{
+  margin:2px;
+  height:21px;
+  background: @amiga-window-medium-blue;
+  border: 2px solid @amiga-window-dark-blue;
+  border-top:0;
+  border-left:0;
+  div{
+    height: 3px;
+    border: 2px solid @amiga-window-medium-blue;
+    border-right: 0;
+    border-bottom: 2px solid @amiga-window-dark-blue;
+    background: @amiga-window-light-blue;
+
+  }
+}
+.amiga-btn-maximize{
+  margin: 2px;
+  margin-right: 4px;
+  height: 11px;
+  border: 2px solid @amiga-window-medium-blue;
+  box-shadow: 2px 4px 0 0 rgba(0,0,0,1);
+}
+.amiga-window-header-container div:nth-child(3){
+  // Build Filler between label and right side buttons.
+  // I probably would select the item like this for syleing but I wanted to show my knowledge.
+  margin:7px 0 6px 6px;
+  border:5px solid @amiga-window-medium-blue;
+  height:4px;
+  border-left: 0;
+  border-right:0;
+  flex-grow:1;
+}
+.amiga-window-view{
+  padding:8px;
+  height: 200px;
+  border-top:4px solid black;
+  border-left: 2px solid black;
+  background: @amiga-window-dark-blue;
+  overflow: auto;
+}
+
+.large-window{
+  height:600px;
+}
+.amiga-window-header-label{
+  vertical-align: top;
+  margin: 2px 6px 0 6px;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+.hide{
+  display:none;
+}
+.clip-square{
+  clip-path: rect(10px, 20px, 30px, 40px);
+}
+.counter{
+  padding:8px;
+}
+@import (inline) "toast.css";
+
+.alert-warning{
+  color: @amiga-window-orange;
+}
+.alert-danger{
+  color:@amiga-window-red ;
+}
+
+.oct{
+  transform: rotate(22.5deg);
+  position: absolute;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(22.5deg);
+  }
+  to{
+    transform: rotate(382.5deg);
+  }
+}
+.rotate{
+  transform-origin: center;
+  animation: rotate 100s linear infinite
+}

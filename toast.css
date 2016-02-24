@@ -1,0 +1,41 @@
+.toast-image {
+  width: 120px;
+}
+.toast {
+  color: #0057af;
+  top: 135px;
+  left: 16px;
+  position: relative;
+}
+.toast-show {
+  animation: show 0.5s ease-in-out forwards;
+}
+.toast-hide {
+  animation: hide 0.5s ease-in-out forwards;
+}
+@keyframes show {
+  0% {
+    top: 135px;
+  }
+  75% {
+    top: -10px;
+  }
+  85% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes hide {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 135px;
+  }
+}
+#message {
+  position: absolute;
+  left: 8px;
+}

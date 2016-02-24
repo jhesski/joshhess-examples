@@ -1,0 +1,29 @@
+mixin jumboTron(Heading)
+  .jumbotron
+    h1=Heading
+    button.panel-button.btn.btn-default(data-panelid="panel1" aria-label="Left Align")
+      span.glyphicon.glyphicon-minus-sign(aria-hidden="true")
+      |  Panel 1
+    button.panel-button.btn.btn-default(data-panelid="panel2" aria-label="Left Align")
+      span.glyphicon.glyphicon-minus-sign(aria-hidden="true")
+      |  Panel 2
+    button.panel-button.btn.btn-default(data-panelid="panel3" aria-label="Left Align")
+      span.glyphicon.glyphicon-minus-sign(aria-hidden="true")
+      |  Panel 3
+    button.panel-button.btn.btn-default(data-panelid="panel4" aria-label="Left Align")
+      span.glyphicon.glyphicon-minus-sign(aria-hidden="true")
+      |  Panel 4
+
+mixin octagon()
+  //Fix Me: Not working in firefox, suspect I could use translate.
+  svg#oct1.oct(height="284px" x="0px" y="0px" width="284px")
+    g
+      path(fill="rgba(180,0,0,.25)" stroke="#000000" stroke-width="0" stroke-miterlimit="10" d="M283.863,142.129L242.351,41.91L142.133,0.395L41.91,41.91L0.398,142.129L41.91,242.351l100.223,41.512l100.218-41.512L283.863,142.129z")
+
+  svg#oct2.oct(height="213px" width="213px" x="0px" y="0px" style="left: 41px; top: 41;")
+    g
+      path(fill="rgba(180,0,0,.25)" stroke="#000000" stroke-width="0" stroke-miterlimit="10" d="M283.863,142.129L242.351,41.91L142.133,0.395L41.91,41.91L0.398,142.129L41.91,242.351l100.223,41.512l100.218-41.512L283.863,142.129z" transform ="scale(.75, .75)")
+
+  svg#oct3.oct(height="142px" width="142px" x="0px" y="0px" style="left: 77px; top: 77;")
+    g
+      path(fill="rgba(180,0,0,.25)" stroke="#000000" stroke-width="0" stroke-miterlimit="10" d="M283.863,142.129L242.351,41.91L142.133,0.395L41.91,41.91L0.398,142.129L41.91,242.351l100.223,41.512l100.218-41.512L283.863,142.129z" transform ="scale(0.5, 0.5)")
